@@ -1,0 +1,11 @@
+#input {
+	height: 300px;
+	overflow: auto;
+	border: 1px solid #999;
+	padding: 0 10px;
+}
+#output {
+	padding: 5px;
+	background-color: #eee;
+	margin-top: 10px;
+}
