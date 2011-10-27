@@ -60,7 +60,7 @@ Using MooTools RequireJS Plugin is very simple.
 	When using require to load the file, prefix it with mootools!.
 	
 
-Demos
+Links
 -----
 
 http://kevinandre.com/dev/mootools/using-require-js-to-load-mootools/
