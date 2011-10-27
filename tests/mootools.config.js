@@ -17,7 +17,7 @@
 		mootools: {
 			corePathVariable: "mcore",
 			useOrder: false,
-			plugins: [
+			modules: [
 				{
 					name: "UniqueWords",
 					path: "lib/kjs",
