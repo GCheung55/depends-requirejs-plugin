@@ -63,7 +63,7 @@ Using MooTools RequireJS Plugin is very simple.
 Demos
 -----
 
-http://kevinandre.com/
+http://kevinandre.com/dev/mootools/using-require-js-to-load-mootools/
 
 
 License
