@@ -1,48 +1,41 @@
-MooTools RequireJS Plugin - Copyright (c) 2011 [Kevin Armstrong](http://kevinandre.com/)
+Depends RequireJS Plugin - Copyright (c) 2011 [Kevin Armstrong](http://kevinandre.com/)
 ========================================================================================
 
-MooTools RequireJS Plugin - A plugin for loading mootools modules using require.js.
+Depends RequireJS Plugin - A plugin for defining static dependencies and loading them using require.js.
 
 
 Compatibility
 -------------
 
-MooTools RequireJS Plugin has been tested with RequireJS 1.0.0.
+Depends RequireJS Plugin has been tested with RequireJS 1.0.0.
 
 
 How to use
 -------------
 
-Using MooTools RequireJS Plugin is very simple.
+Using Depends RequireJS Plugin is very simple.
 
 	Create a requirejs config. This config can exist in the html or in a separate js file. I prefer a separate js file so that the config can be shared among several files. See the file:
 	
 	tests/mootools.config.js	
 	
-	In particular, the require config should contain the 'mootools' option.
+	In particular, the require config should contain the 'dependencies' option.
 	
-	mootools: {
-		corePathVariable: "mcore",
-		useOrder: false,
-		plugins: [
-			{
-				name: "UniqueWords",
-				path: "lib/kjs",
-				files: [
-					{ name: "UniqueWords", provides: "UniqueWords", requires: ["Class", "More/Array.Extras"] }
-				]
-			}
-		]
-	}
+	useOrder: false,
+	dependencies: [
+		{
+			name: "UniqueWords",
+			path: "lib/kjs",
+			files: [
+				{ name: "UniqueWords", provides: "UniqueWords", requires: ["Class", "More/Array.Extras"] }
+			]
+		}
+	]
 	
-	*corePathVariable*: 
-		the variable used in the 'paths' option to specify the location of the MooTools core library
-	*morePathVariable*: 
-		the variable used in the 'paths' option to specify the location of the MooTools more library
 	*useOrder*: 
 		option whether to use the order plugin to load the modules in the order they are presented
-	*plugins*: 
-		an array of libraries used in your site. Each plugin should contain the options:
+	*dependencies*: 
+		an array of libraries used in your site. Each dependency should contain the options:
 			*name*: library name
 			*path*: location of the library files. Absolute path or a path relative to the require.js baseUrl option
 			*files*: array of file objects used by the library. Each object should contain:
@@ -51,19 +44,19 @@ Using MooTools RequireJS Plugin is very simple.
 				*requires*: string or array of modules required by the file
 
 	
-	require( ["plugins/mootools!UniqueWords"],
+	require( ["plugins/depends!UniqueWords"],
 		function() {
 			...
 		}
 	);
 	
-	When using require to load the file, prefix it with mootools!.
+	When using require to load the file, prefix it with depends!.
 	
 
 Links
 -----
 
-http://kevinandre.com/dev/mootools/using-require-js-to-load-mootools/
+http://kevinandre.com/dev/depends/using-require-js-to-load-mootools/
 
 
 License
