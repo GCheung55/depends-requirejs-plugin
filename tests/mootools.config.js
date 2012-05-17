@@ -128,7 +128,6 @@
 					{ name: "UniqueWords", provides: "UniqueWords", requires: ["Class", "More/Array.Extras"] }
 				]
 			}
-			]
-		}
+		]
 	});
 })();
